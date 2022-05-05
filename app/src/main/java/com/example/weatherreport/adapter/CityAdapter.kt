@@ -3,7 +3,6 @@ package com.example.weatherreport.adapter
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -13,8 +12,6 @@ import com.example.weatherreport.City
 import com.example.weatherreport.DetailsActivity
 import com.example.weatherreport.databinding.CityBinding
 import com.example.weatherreport.touch.CityTouchHelperCallback
-import java.text.SimpleDateFormat
-import java.util.*
 
 class CityAdapter(var context: Context) :
     ListAdapter<City, CityAdapter.ViewHolder>(DiffCallback()), CityTouchHelperCallback {
@@ -25,7 +22,7 @@ class CityAdapter(var context: Context) :
 
     var cities = arrayListOf<City>()
 
-    inner class ViewHolder(var binding: CityBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(private var binding: CityBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(city: City) {
             binding.tvCityName.text = city.name
             binding.btnRemove.setOnClickListener { deleteCity(this.adapterPosition) }
@@ -54,13 +51,11 @@ class CityAdapter(var context: Context) :
     fun addCity(city: City) {
         cities.add(city)
         notifyItemInserted(cities.indexOf(city))
-        Log.d("SIZE", "${cities.size}")
     }
 
     fun deleteCity(idx: Int) {
         cities.removeAt(idx)
         notifyItemRemoved(idx)
-        Log.d("SIZE", "${cities.size}")
     }
 
     override fun onDismissed(position: Int) {

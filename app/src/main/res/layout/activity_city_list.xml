@@ -28,7 +28,8 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/app_background"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:contentDescription="@string/clouds" />
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -58,6 +59,7 @@
         android:layout_marginEnd="@dimen/fab_margin"
         app:layout_anchor="@id/appBar"
         app:layout_anchorGravity="bottom|end"
-        app:srcCompat="@android:drawable/ic_input_add"/>
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:contentDescription="@string/add" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

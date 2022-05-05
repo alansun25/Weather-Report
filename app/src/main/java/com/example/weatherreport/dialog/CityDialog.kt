@@ -3,12 +3,9 @@ package com.example.weatherreport.dialog
 import android.app.Dialog
 import android.content.Context
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import com.example.weatherreport.City
-import com.example.weatherreport.CityListActivity
-import com.example.weatherreport.R
 import com.example.weatherreport.databinding.ActivityDialogBinding
 
 class CityDialog : DialogFragment() {

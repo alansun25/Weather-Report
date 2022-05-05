@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Weather Report</string>
+    <string name="invalidCity">Error: Invalid city</string>
+    <string name="sunrise">Sunrise:</string>
+    <string name="sunset">Sunset:</string>
+    <string name="humidity">Humidity:</string>
+    <string name="min">Min:</string>
+    <string name="degree">°</string>
+    <string name="max">Max:</string>
+    <string name="percent">%</string>
+    <string name="feelsLike">Feels Like:</string>
+    <string name="clouds">Clouds in the sky</string>
+    <string name="add">add</string>
+    <string name="weather">weather</string>
+    <string name="city_name">City Name</string>
+    <string name="x">✕</string>
+    <string name="details">Details</string>
 </resources>
